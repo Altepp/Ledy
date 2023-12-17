@@ -4,12 +4,14 @@ let wavesurfer = null
 
 
 export function playtest() {
-    if (wavesurfer.isPlaying()) {
-        wavesurfer.pause()
+    if (wavesurfer) {
+        if (wavesurfer.isPlaying()) {
+            wavesurfer.pause()
 
-    } else {
-        wavesurfer.play()
+        } else {
+            wavesurfer.play()
 
+        }
     }
 }
 
@@ -19,14 +21,14 @@ export function setSong(url) {
         wavesurfer.destroy()
         wavesurfer = null
     }
-    
+
     wavesurfer = WaveSurfer.create({
         container: '#audio-graph',
         waveColor: '#CCC',
         progressColor: '#FFF',
         url: url,
     })
-    
+
 }
 
 window.playtest = playtest

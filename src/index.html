@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style/style.css">
 </head>
 
 <body>
 
     <input type="file" name="input" id="file-input" accept="audio/mp3" hidden>
     <audio id="audio" controls hidden>
-        <source src="mysong.mp3" type="audio/mp3">
+        <source src="" type="audio/mp3">
     </audio>
     <div class="tool-tip">
         <div class="tabs">
@@ -35,32 +35,56 @@
             </ul>
             <div class="tab-content">
                 <div id="content-0">
-                    <button type="button" class="action-button"><img src="./add-circle-outline.svg" alt="">New
-                        Project</button>
-                    <button type="button" class="action-button" onclick="playtest()"><img src="./play-outline.svg"
-                            alt="">Test Play</button>
+                    <button type="button" class="action-button">
+                        <img src="./icon/add-circle.svg" alt="">
+                        New Project
+                    </button>
+                    <button type="button" class="action-button" onclick="playtest()">
+                        <img src="./icon/play.svg" alt="">
+                        Test Play
+                    </button>
                 </div>
                 <div id="content-1" hidden>
-                    <button type="button" class="action-button"><img src="./play-outline.svg" alt="">Play</button>
-                    <button type="button" class="action-button"><img src="./download-outline.svg" alt="">Load</button>
-
+                    <button type="button" class="action-button">
+                        <img src="./icon/play.svg" alt="">
+                        Play
+                    </button>
+                    <button type="button" class="action-button">
+                        <img src="./icon/download.svg" alt="">
+                        Load
+                    </button>
                 </div>
                 <div id="content-2" hidden>
-                    <button type="button" class="action-button"><img src="./play-outline.svg" alt="">222222</button>
-                    <button type="button" class="action-button"><img src="./download-outline.svg" alt="">Load</button>
+                    <button type="button" class="action-button">
+                        <img src="./icon/download.svg" alt="">
+                        222222
+                    </button>
+                    <button type="button" class="action-button">
+                        <img src="./icon/download.svg" alt="">
+                        Load
+                    </button>
 
                 </div>
                 <div id="content-3" hidden>
-                    <button type="button" class="action-button" id="import-song"><img src="./download-outline.svg"
-                            alt="">Import</button>
-                    <button type="button" class="action-button" id="test-song"><img src="./play-outline.svg"
-                            alt="">Listen</button>
+                    <button type="button" class="action-button" id="import-song">
+                        <img src="./icon/download.svg" alt="">
+                        Import
+                    </button>
+                    <button type="button" class="action-button" id="test-song">
+                        <img src="./icon/play.svg" alt="">
+                        Listen
+                    </button>
 
                 </div>
                 <div id="content-4" hidden>
-                    <button type="button" class="action-button"><img src="./star-outline.svg" alt="">Effects</button>
-                    <button type="button" class="action-button"><img src="./play-outline.svg" alt="">Video</button>
-
+                    <button type="button" class="action-button">
+                        <img src="./icon/star.svg" alt="">
+                        Effects
+                    </button>
+                    <button type="button" class="action-button">
+                        <img src="./icon/play.svg" alt="">
+                        Video
+                    </button>
                 </div>
             </div>
         </div>
@@ -70,7 +94,8 @@
 
         </div>
     </div>
-    <script src="index.js"></script>
+    <script src="script/index.js"></script>
+    <script src="script/song-importer.js"></script>
     <script src="script/tab.js"></script>
     <script src="script/loader.js"></script>
     <script src="script/player.js" type="module"></script>

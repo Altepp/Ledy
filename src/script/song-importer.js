@@ -1,3 +1,6 @@
+let files = document.getElementById("file-input");
+let importbtn = document.getElementById("import-song");
+let audio = document.getElementById("audio");
 
 function importSong() {
     // Ouvre une boîte de dialogue de sélection de fichier
@@ -6,11 +9,9 @@ function importSong() {
 
 
 }
-const files = document.getElementById("file-input");
 
 
-document.getElementById("import-song").addEventListener("click", importSong);
-const audio = document.getElementById("audio");
+importbtn.addEventListener("click", importSong);
 
 
 files.oninput = (ev) => {
@@ -25,12 +26,8 @@ files.oninput = (ev) => {
 let interval = ""
 
 function play() {
-    //audio.play();
-
-    console.log(audio.paused)
 
     if (audio.paused || audio.ended) {
-        console.log("ltt shit")
         audio.play();
 
         interval = setInterval(() => {
